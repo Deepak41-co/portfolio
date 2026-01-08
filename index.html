@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>K Naga Deepak | Machine Learning Engineer | Computer Vision & Data Science Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of K Naga Deepak, a Machine Learning Engineer with startup production experience specializing in Computer Vision, end-to-end ML pipelines, and data-driven problem solving.">
+  <meta name="keywords" content="Machine Learning Engineer, Data Scientist, Computer Vision Engineer, ML Portfolio, Deep Learning, Python, SQL" />
+
+  <!-- <link rel="preload" href="fonts/YourFont.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="your-icons.woff2" as="font" type="font/woff2" crossorigin> -->
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      // Initialize EmailJS with your public key
+      emailjs.init('DujaU-iwSrpno-OdI');
+    })();
+  </script>
+
+  <style>
+    :root {
+      --primary-color: #2d3436;
+      --secondary-color: #0984e3;
+      --accent-color: #00b894;
+      --light-bg: #f8f9fa;
+      --dark-bg: #2d3436;
+      --text-light: #636e72;
+      --text-dark: #2d3436;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+      padding-top: 80px; /* Add padding to account for fixed navbar */
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px; /* This fixes the issue! */
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: rgba(45, 52, 54, 0.95) !important;
+      backdrop-filter: blur(10px);
+      padding: 15px 0;
+      transition: var(--transition);
+      height: 80px; /* Fixed height for navbar */
+    }
+
+    /* Navbar Links */
+    .navbar .nav-link {
+      color:#e0e0e0;
+      font-weight: 500;
+      margin: 0 8px;
+      padding: 0.75rem 1rem;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    /* Hover + Active color */
+    .navbar .nav-link:hover,
+    .navbar .nav-link.active {
+      color: var(--secondary-color);
+    }
+
+    /* Active underline indicator */
+    .navbar .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 6px;
+      width: 0;
+      height: 2px;
+      background: var(--secondary-color);
+      transform: translateX(-50%);
+      transition: width 0.3s ease;
+      border-radius: 2px;
+    }
+
+    .navbar .nav-link:hover::after,
+    .navbar .nav-link.active::after {
+      width: 100%;
+    }
+
+    .navbar-brand {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      margin: 0 8px;
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: var(--secondary-color);
+      left: 50%;
+      bottom: 0;
+      transition: var(--transition);
+      transform: translateX(-50%);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    /* Hero Section - STATIC */
+    #home {
+      min-height: calc(100vh - 80px); /* Account for navbar height */
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #home::before {
+      content: '';
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: linear-gradient(45deg, rgba(9, 132, 227, 0.1), rgba(0, 184, 148, 0.1));
+      top: -250px;
+      right: -100px;
+    }
+
+    .hero-content h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .hero-content .highlight {
+      background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      color: var(--text-light);
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 12px 30px;
+      background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+      color: white;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+      border: none;
+      box-shadow: var(--shadow);
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(9, 132, 227, 0.2);
+      color: white;
+    }
+
+    /* Section Styling */
+    section {
+      padding: 100px 0;
+      /* Add scroll-margin to prevent cutting off */
+      scroll-margin-top: 80px;
+    }
+
+    /* Specifically for sections after home to ensure proper spacing */
+    /* #about, #problem-solving, #projects, #skills, #contact {
+      padding-top: 120px; 
+      margin-top: -40px; 
+    } */
+
+    .section-title {
+      position: relative;
+      margin-bottom: 60px;
+      text-align: center;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      width: 70px;
+      height: 4px;
+      background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+
+    /* Cards */
+    .card {
+      border: none;
+      border-radius: 15px;
+      transition: var(--transition);
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow);
+    }
+
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .card:hover .card-img-top {
+      transform: scale(1.05);
+    }
+
+    /* Skills Cards */
+    .skill-card {
+      text-align: center;
+      padding: 30px 20px;
+      border-radius: 15px;
+      background: white;
+      height: 100%;
+      transition: var(--transition);
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .skill-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 20px;
+      background: linear-gradient(135deg, rgba(9, 132, 227, 0.1), rgba(0, 184, 148, 0.1));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      color: var(--secondary-color);
+    }
+
+    /* Problem Solving Stats */
+    .stat-card {
+      padding: 30px 15px;
+      overflow: hidden;
+      border-radius: 15px;
+      text-align: center;
+      background: white;
+      height: 100%;
+      border: 2px solid transparent;
+      background-clip: padding-box;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+      
+    }
+
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      right: -2px;
+      bottom: -2px;
+      left: -2px;
+      background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+      border-radius: 17px;
+      z-index: -1;
+      opacity: 0.05;
+      transition: var(--transition);
+    }
+
+    /* .stat-card:hover {
+      transform: none !important;
+      box-shadow: 0 15px 35px rgba(9, 132, 227, 0.15); 
+      border: 2px solid var(--secondary-color) !important; 
+    } */
+
+    /* FIX text visibility on hover */
+    
+
+    #problem-solving .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    #problem-solving .col-md-4, 
+    #problem-solving .col-lg-3 {
+      display: flex;
+      margin-bottom: 24px; /* Space between rows on tablet */
+    }
+    .stat-card:hover::before {
+      opacity: 1;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;          /* Slightly reduced */
+      font-weight: 700;
+      line-height: 1.1;           /* Prevent clipping */
+      word-break: break-word;     /* Allow long words to wrap */
+      text-align: center;
+
+      background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      margin-bottom: 10px;
+    }
+    /* Adjust font size for tablets specifically */
+    @media (min-width: 768px) and (max-width: 991px) {
+      .stat-number {
+        font-size: 2.2rem;
+      }
+      .stat-card h5 {
+        font-size: 1.1rem;
+      }
+    }
+
+    /* Contact Section */
+    #contact {
+      background: linear-gradient(135deg, var(--dark-bg) 0%, #1a1e23 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #contact::before {
+      content: '';
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: linear-gradient(45deg, rgba(9, 132, 227, 0.1), rgba(0, 184, 148, 0.1));
+      bottom: -150px;
+      left: -100px;
+    }
+
+    .contact-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 24px;
+      color: white;
+    }
+
+    .social-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      font-size: 20px;
+      transition: var(--transition);
+      margin: 0 10px;
+    }
+
+    .social-icon:hover {
+      background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+      transform: translateY(-5px);
+    }
+
+    /* Form Loading State */
+    .loading {
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    .loading-spinner {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: white;
+      animation: spin 1s ease-in-out infinite;
+      margin-right: 10px;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Alert Messages */
+    .alert {
+      border-radius: 10px;
+      border: none;
+    }
+
+    /* Footer */
+    footer {
+      background: #1a1e23;
+      color: #b2bec3;
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    /* ===== Scroll Animation Classes REMOVED ===== */
+    /* All scroll-reveal related CSS has been removed */
+
+    /* Typewriter Effect for Home (Static but with animation) */
+    .typewriter-text {
+      overflow: hidden;
+      border-right: 3px solid var(--secondary-color);
+      white-space: nowrap;
+      margin: 0;
+      animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: var(--secondary-color) }
+    }
+
+    /* Floating Animation for Home Image */
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    .floating {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .form-control::placeholder {
+     color: #ffffff;
+     opacity: 0.30; /* important for full white */
+    }
+    /* Fade In Animation for Home */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+
+    .fade-in {
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    .fade-in-delay-1 {
+      animation: fadeIn 1s ease-out 0.3s forwards;
+      opacity: 0;
+    }
+
+    .fade-in-delay-2 {
+      animation: fadeIn 1s ease-out 0.6s forwards;
+      opacity: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      body {
+        padding-top: 70px;
+      }
+      
+      html {
+        scroll-padding-top: 70px;
+      }
+      
+      .navbar {
+        height: 70px;
+        
+      }
+      
+      #home {
+        min-height: calc(100vh - 70px);
+      }
+      
+      section {
+        scroll-margin-top: 70px;
+      }
+      
+      /* #about, #problem-solving, #projects, #skills, #contact {
+        padding-top: 100px;
+        margin-top: -30px;
+      } */
+      
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+      
+      section {
+        padding: 60px 0;
+      }
+    }
+    /* Fix mobile navbar visibility */
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        background-color: #0b1c2d; /* dark background */
+        transition: all 0.3s ease;
+        padding: 1rem;
+        border-radius: 10px;
+      }
+
+      .navbar-nav .nav-link {
+        color: #ffffff !important;
+        padding: 10px 0;
+      }
+
+      .navbar-nav .nav-link:hover {
+        color: #00d2ff !important;
+      }
+      
+    }
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        transition: all 0.3s ease;
+      }
+    }
+    
+    /* Fix CTA button spacing on mobile */
+    @media (max-width: 576px) {
+      .hero-content .cta-button {
+        display: block;
+        padding: 14px 32px;
+        font-size: 1.05rem;
+        width: 100%;
+        margin-bottom: 12px;
+        text-align: center;
+      }
+
+      .hero-content .cta-button:last-child {
+        margin-bottom: 0;
+      }
+    }
+    /* Global CTA button spacing fix for mobile */
+    @media (max-width: 576px) {
+      .cta-button {
+        display: block;
+        width: 100%;
+        margin-bottom: 12px;
+        text-align: center;
+      }
+
+      .cta-button:last-child {
+        margin-bottom: 0;
+      }
+    }
+    @media (max-width: 576px) {
+      .cta-button.me-3 {
+        margin-right: 0 !important;
+      }
+    }
+
+    
+
+  </style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand">K Naga Deepak</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#problem-solving">Problem Solving</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- ================= HOME ================= -->
+<section id="home" class="pt-5">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Image: First on mobile, second on desktop -->
+      <div class="col-lg-6 text-center order-1 order-lg-2">
+        <div class="floating fade-in">
+          <img src="images/Deepak_image.webp"
+              srcset="
+                images/Deepak_image.webp 200w,
+                images/Deepak_image.webp 400w
+              "
+              sizes="(max-width: 768px) 200px, 400px"
+              width="400"
+              height="400"
+              fetchpriority="high"
+              decoding="async"
+              alt="K Naga Deepak - Machine Learning Engineer specializing in Computer Vision and scalable ML systems"
+              class="img-fluid rounded-circle shadow-lg"
+              style="width: 360px; height: 360px; object-fit: cover;">
+        </div>
+      </div>
+
+      <!-- Content: Second on mobile, first on desktop -->
+      <div class="col-lg-6 hero-content order-2 order-lg-1">
+        <h1>
+          Machine Learning Engineer Building
+          <span class="highlight">Scalable ML Systems</span>
+        </h1>
+
+        <p class="fade-in-delay-1">
+          Machine Learning Engineer with <strong>startup production experience</strong>,
+          specializing in <strong>Computer Vision</strong>,
+          <strong>end-to-end ML pipelines</strong>,
+          and <strong>production-grade deployments</strong>.
+          Proven at improving model performance, system reliability,
+          and delivering measurable business impact in real-world applications.
+        </p>
+
+        <!-- CTA -->
+        <div class="mt-4">
+          <a href="#projects" class="cta-button me-3 fade-in-delay-3" aria-label="View Projects">
+            View Data Science Projects
+          </a>
+          <a href="#contact"
+            class="cta-button fade-in-delay-3"
+            style="background: transparent; border: 2px solid var(--secondary-color); color: var(--secondary-color);" aria-label="Contact Me">
+            Contact Me
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="py-5">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    
+    <div class="row align-items-center">
+      
+      <!-- Profile Image -->
+      <div class="col-lg-4 text-center mb-4 mb-lg-0">
+        <div>
+          <img src="images/about/Data_scientist.webp" 
+                srcset="
+                  images/about/Data_scientist.webp 200w,
+                  images/about/Data_scientist.webp 400w
+                "
+                sizes="(max-width: 768px) 200px, 400px"
+                width="400"
+                height="400"
+                fetchpriority="high"
+                decoding="async"
+               alt="K Naga Deepak"
+               class="img-fluid rounded-circle shadow"
+               style="width: 250px; height: 250px; object-fit: cover;">
+        </div>
+      </div>
+      
+      <!-- Content -->
+      <div class="col-lg-8">
+        <div class="about-content">
+          
+          <h3 class="mb-4">Machine Learning Engineer</h3>
+
+          <h3 class="visually-hidden">
+            Machine Learning Engineer specializing in Computer Vision and Production ML Systems
+          </h3>
+
+          <p class="lead mb-4">
+            I’m a <strong>Machine Learning Engineer</strong> with hands-on
+            <strong>startup production experience</strong>, focused on building
+            <strong>reliable and scalable machine learning systems</strong> that move
+            beyond notebooks and deliver measurable value in real-world, live environments.
+          </p>
+
+          <p class="mb-4">
+            My work spans the <strong>end-to-end machine learning lifecycle</strong> —
+            from <strong>data preprocessing and feature engineering</strong> to
+            <strong>model optimization, deployment, and monitoring</strong>.
+            I specialize in <strong>Computer Vision systems</strong> and enjoy solving
+            real-world data challenges where <strong>performance, reliability, and scalability</strong>
+            are critical to success.
+          </p>
+
+          <!-- Focus Areas -->
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <i class="fas fa-check text-success me-2"></i>
+                  Computer Vision & Deep Learning
+                </li>
+                <li class="mb-2">
+                  <i class="fas fa-check text-success me-2"></i>
+                  End-to-End ML Pipeline Design
+                </li>
+                <li class="mb-2">
+                  <i class="fas fa-check text-success me-2"></i>
+                  Model Optimization & Evaluation
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-md-6">
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <i class="fas fa-check text-success me-2"></i>
+                  Production Model Deployment
+                </li>
+                <li class="mb-2">
+                  <i class="fas fa-check text-success me-2"></i>
+                  Real-World Data Handling & Preprocessing
+                </li>
+                <li class="mb-2">
+                  <i class="fas fa-check text-success me-2"></i>
+                  Scalable ML System Architecture
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="mt-4">
+            <a href="assets/resume/K_Naga_Deepak_Resume.pdf" target="_blank" class="cta-button me-3" aria-label="Profile Photo">
+              <i class="fas fa-eye me-2"></i>View Resume
+            </a>
+            <a href="#contact"
+               class="cta-button"
+               style="background: transparent; border: 2px solid var(--secondary-color); color: var(--secondary-color);" aria-label="Contact Me">
+              <i class="fas fa-paper-plane me-2"></i>Get in Touch
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROBLEM SOLVING ================= -->
+<section id="problem-solving" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title">Problem Solving & Algorithmic Thinking</h2>
+    
+    <!-- Description -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-9 text-center">
+        <p class="lead">
+          Solved <strong>355+ data structures, algorithms, and SQL problems</strong> on LeetCode,
+          with a strong focus on writing <strong>efficient, scalable solutions</strong>.
+          This practice has strengthened my ability to reason about time-space tradeoffs,
+          optimize data access patterns, and translate abstract problems into
+          production-ready logic.
+        </p>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="row g-4 text-center">
+  
+      <div class="col-md-6 col-lg-3">
+        <div class="stat-card h-100">
+          <div class="stat-number">355+</div>
+          <h5>Problems Solved</h5>
+          <p class="text-muted">Algorithms & SQL</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="stat-card h-100">
+          <div class="stat-number">DSA</div>
+          <h5>Algorithmic Depth</h5>
+          <p class="text-muted">Arrays, Trees, Graphs, DP</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="stat-card h-100">
+          <div class="stat-number">SQL</div>
+          <h5>Query Optimization</h5>
+          <p class="text-muted">Joins, CTEs, Window Functions</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="stat-card h-100">
+          <div class="stat-number">Consistency</div>
+          <h5>Problem Solving Habit</h5>
+          <p class="text-muted">Long-term Daily Practice</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-5">
+      <a href="https://leetcode.com/u/nagadeepak48/"
+         target="_blank"
+         class="cta-button" aria-label="View LeetCode Profile">
+        <i class="fas fa-external-link-alt me-2"></i>View LeetCode Profile
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="py-5">
+  <div class="container">
+    <h2 class="section-title">
+      Data Science Projects
+    </h2>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- IPL DATA ANALYSIS PROJECT -->
+      <div class="col-md-6">
+        <div class="card h-100">
+          <div class="position-relative overflow-hidden">
+            <img src="images/projects/IPL_analysis.webp"
+                 srcset="
+                  images/projects/IPL_analysis.webp 400w,
+                  images/projects/IPL_analysis.webp 800w
+                 "
+                  sizes="(max-width: 768px) 400px, 800px"
+                  width="800"
+                  height="400"
+                  fetchpriority="high"
+                  decoding="async"
+                 class="card-img-top"
+                 alt="IPL Data Analysis and Visualization project using Python and Pandas">
+            <div class="position-absolute top-0 end-0 bg-warning text-dark px-3 py-1 m-3 rounded">
+              <small>Data Analysis</small>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">
+              IPL Data Analysis & Visualization Using Python (2008–2024)
+            </h5>
+
+            <p class="card-text text-muted">
+              End-to-end <strong>exploratory data analysis</strong> and
+              <strong>statistical modeling</strong> on
+              <strong>200,000+ ball-by-ball deliveries</strong> across
+              <strong>1,095 IPL matches</strong>, uncovering long-term team,
+              player performance, and match-winning patterns.
+            </p>
+
+            <ul class="small text-muted ps-3">
+              <li>Built a scalable analytics pipeline using <strong>Pandas & NumPy</strong></li>
+              <li>Derived <strong>10+ KPIs</strong> for batting efficiency, bowling impact, and team strategy</li>
+              <li>Visualized <strong>16 years of IPL trends</strong> using Matplotlib & Seaborn</li>
+            </ul>
+
+            <div class="mb-3">
+              <span class="badge bg-light text-dark me-2">Python</span>
+              <span class="badge bg-light text-dark me-2">Pandas</span>
+              <span class="badge bg-light text-dark me-2">Matplotlib</span>
+              <span class="badge bg-light text-dark">Seaborn</span>
+            </div>
+
+            <a href="https://www.kaggle.com/code/deepak48/ipl-2008-2024-deep-data-analysis-insights"
+               target="_blank"
+               class="text-decoration-none" aria-label="View IPL Data Analysis Project on Kaggle">
+              <i class="fas fa-external-link-alt me-1"></i> View Project on Kaggle
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- STROKE PREDICTION PROJECT -->
+      <div class="col-md-6">
+        <div class="card h-100">
+          <div class="position-relative overflow-hidden">
+            <img src="images/projects/Stroke_prediction.webp"
+                  srcset="
+                    images/projects/Stroke_prediction.webp 400w,
+                    images/projects/Stroke_prediction.webp 800w
+                  "
+                  sizes="(max-width: 768px) 400px, 800px"
+                  width="800"
+                  height="400"
+                  fetchpriority="high"
+                  decoding="async"
+                 class="card-img-top"
+                 alt="Stroke prediction machine learning classification project in healthcare">
+            <div class="position-absolute top-0 end-0 bg-primary text-white px-3 py-1 m-3 rounded">
+              <small>Machine Learning</small>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">
+              Stroke Prediction Using Machine Learning Classification
+            </h5>
+
+            <p class="card-text text-muted">
+              Healthcare-focused <strong>machine learning classification system</strong>
+              designed to identify <strong>high-risk stroke patients</strong>
+              while minimizing false negatives in real-world clinical environments.
+            </p>
+
+            <ul class="small text-muted ps-3">
+              <li>Addressed <strong>5% class imbalance</strong> using SMOTE and cost-sensitive learning</li>
+              <li>Improved stroke-risk recall from <strong>77% to 84%</strong> with XGBoost and Random Forest</li>
+              <li>Validated model performance using <strong>k-fold cross-validation and ROC-AUC</strong></li>
+            </ul>
+
+            <div class="mb-3">
+              <span class="badge bg-light text-dark me-2">Scikit-learn</span>
+              <span class="badge bg-light text-dark me-2">XGBoost</span>
+              <span class="badge bg-light text-dark me-2">SMOTE</span>
+              <span class="badge bg-light text-dark">EDA</span>
+            </div>
+
+            <a href="https://www.kaggle.com/code/deepak48/stroke-prediction-with-machine-learning"
+               target="_blank"
+               class="text-decoration-none" aria-label="View Stroke Prediction Project on Kaggle">
+              <i class="fas fa-external-link-alt me-1"></i> View Project on Kaggle
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ================= SKILLS ================= -->
+<section id="skills" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Technical Skills</h2>
+
+    <div class="row g-4">
+
+      <div class="col-md-6 col-lg-4">
+        <div class="skill-card h-100">
+          <div class="skill-icon">
+            <i class="fab fa-python"></i>
+          </div>
+          <h4>Python Ecosystem</h4>
+          <p class="text-muted">
+            Python, Pandas, NumPy, Scikit-learn,Data Cleaning, Feature Pipelines
+          </p>
+          <div class="mt-auto pt-3">
+            <div class="progress" style="height: 8px;">
+              <div class="progress-bar" style="width: 96%; background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="skill-card h-100">
+          <div class="skill-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h4>Data Analysis & Viz</h4>
+          <p class="text-muted">
+            EDA, Feature Engineering, Matplotlib, Seaborn, Plotly, Power BI
+          </p>
+          <div class="mt-auto pt-3">
+            <div class="progress" style="height: 8px;">
+              <div class="progress-bar" style="width: 95%; background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="skill-card h-100">
+          <div class="skill-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h4>Machine Learning</h4>
+          <p class="text-muted">
+            Classification, Regression, SMOTE, XGBoost, Random Forest, Cross-Validation, Hyperparameter Tuning, Model Evaluation
+          </p>
+          <div class="mt-auto pt-3">
+            <div class="progress" style="height: 8px;">
+              <div class="progress-bar" style="width: 92%; background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="skill-card h-100">
+          <div class="skill-icon">
+            <i class="fas fa-eye"></i>
+          </div>
+          <h4>Deep Learning & CV</h4>
+          <p class="text-muted">
+            TensorFlow, Keras, CNNs, RNNs, OpenCV, MediaPipe, Image Augmentation
+          </p>
+          <div class="mt-auto pt-3">
+            <div class="progress" style="height: 8px;">
+              <div class="progress-bar" style="width: 88%; background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="skill-card h-100">
+          <div class="skill-icon">
+            <i class="fas fa-language"></i>
+          </div>
+          <h4>NLP</h4>
+          <p class="text-muted">
+            LLMs, Hugging Face, Transformers, BERT, Tokenization, Text Preprocessing
+          </p>
+          <div class="mt-auto pt-3">
+            <div class="progress" style="height: 8px;">
+              <div class="progress-bar" style="width: 85%; background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="skill-card h-100">
+          <div class="skill-icon">
+            <i class="fas fa-database"></i>
+          </div>
+          <h4>SQL & Databases</h4>
+          <p class="text-muted">
+            MySQL, Complex Joins, Subqueries, Window Functions, Query Optimization
+          </p>
+          <div class="mt-auto pt-3">
+            <div class="progress" style="height: 8px;">
+              <div class="progress-bar" style="width: 94%; background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="skill-card h-100">
+          <div class="skill-icon">
+            <i class="fas fa-puzzle-piece"></i>
+          </div>
+          <h4>Problem Solving & DSA</h4>
+          <p class="text-muted">
+            355+ LeetCode Problems, Data Structures, Algorithms, Logical & Optimized Solutions
+          </p>
+          <div class="mt-auto pt-3">
+            <div class="progress" style="height: 8px;">
+              <div class="progress-bar" style="width: 93%; background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="skill-card h-100">
+          <div class="skill-icon">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h4>MLOps & Deployment</h4>
+          <p class="text-muted">
+            Docker, FastAPI, Streamlit, Render
+          </p>
+          <div class="mt-auto pt-3">
+            <div class="progress" style="height: 8px;">
+              <div class="progress-bar" style="width: 86%; background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="skill-card h-100">
+          <div class="skill-icon">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h4>Tools & Workflow</h4>
+          <p class="text-muted">
+            Jupyter, VS Code, Google Colab, Kaggle, Git, GitHub
+          </p>
+          <div class="mt-auto pt-3">
+            <div class="progress" style="height: 8px;">
+              <div class="progress-bar" style="width: 92%; background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> </div> </section>
+
+
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="py-5 text-white">
+  <div class="container text-center">
+    <h2 class="section-title text-white">Get In Touch</h2>
+    <p class="lead mb-5">I'm currently open to new opportunities and interesting projects.</p>
+
+    <div class="row justify-content-center mb-5">
+      <div class="col-md-4 mb-4">
+        <div>
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h5>Email</h5>
+          <p>deepak48.ai@gmail.com</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div>
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <h5>Phone</h5>
+          <p>+91 93462 80868</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div>
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h5>Location</h5>
+          <p>Hyderabad, India</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center flex-wrap mb-5">
+      <a href="https://www.linkedin.com/in/nagadeepak/" target="_blank" class="social-icon" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://github.com/Deepak41-co" target="_blank" class="social-icon" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <form id="contact-form">
+          <div id="form-alert" class="alert d-none mb-3"></div>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <input type="text" id="name" name="name" 
+                     class="form-control form-control-lg bg-transparent text-white border-white" 
+                     placeholder="Your Name" required>
+            </div>
+            <div class="col-md-6">
+              <input type="email" id="email" name="email" 
+                     class="form-control form-control-lg bg-transparent text-white border-white" 
+                     placeholder="Your Email" required>
+            </div>
+            <div class="col-12">
+              <textarea class="form-control form-control-lg bg-transparent text-white border-white" 
+                        rows="4" id="message" name="message" placeholder="Your Message" required></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" id="submit-btn" class="cta-button w-100">
+                <span id="submit-text">
+                  <i class="fas fa-paper-plane me-2"></i>Send Message
+                </span>
+                <span id="submit-spinner" class="d-none">
+                  <span class="loading-spinner"></span>Sending...
+                </span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2025 K Naga Deepak. All rights reserved.</p>
+    <p>Crafting intelligent solutions through machine learning</p>
+  </div>
+</footer>
+
+
+<script>
+  // EmailJS Integration
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form elements
+    const submitBtn = document.getElementById('submit-btn');
+    const submitText = document.getElementById('submit-text');
+    const submitSpinner = document.getElementById('submit-spinner');
+    const formAlert = document.getElementById('form-alert');
+    
+    // Show loading state
+    submitText.classList.add('d-none');
+    submitSpinner.classList.remove('d-none');
+    submitBtn.classList.add('loading');
+    formAlert.classList.add('d-none');
+    
+    // Prepare template parameters
+    const templateParams = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      message: document.getElementById('message').value,
+      to_email: 'deepak48.ai@gmail.com', // Your email where you want to receive messages
+      timestamp: new Date().toLocaleString()
+    };
+    
+    // Send email using EmailJS
+    emailjs.send('service_tqxupjr', 'template_99b7epv', templateParams)
+      .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        
+        // Show success message
+        formAlert.className = 'alert alert-success';
+        formAlert.textContent = 'Message received! Thank you for reaching out. I\'ll review your inquiry and respond within 24 hours.';
+        formAlert.classList.remove('d-none');
+        
+        // Reset form
+        document.getElementById('contact-form').reset();
+      }, function(error) {
+        console.log('FAILED...', error);
+        
+        // Show error message
+        formAlert.className = 'alert alert-danger';
+        formAlert.textContent = 'Sorry, there was an error sending your message. Please try again or email me directly at deepak48.ai@gmail.com';
+        formAlert.classList.remove('d-none');
+      })
+      .finally(function() {
+        // Reset button state
+        submitText.classList.remove('d-none');
+        submitSpinner.classList.add('d-none');
+        submitBtn.classList.remove('loading');
+      });
+  });
+
+  // REMOVED: Intersection Observer for scroll animations
+
+  // Navbar scroll effect
+  window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.style.padding = '10px 0';
+      navbar.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+    } else {
+      navbar.style.padding = '15px 0';
+      navbar.style.boxShadow = 'none';
+    }
+  });
+
+  // Active nav link
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  window.addEventListener('scroll', function() {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (scrollY >= (sectionTop - 200)) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${current}`) {
+        link.classList.add('active');
+      }
+    });
+  });
+
+  // Initialize tooltips
+  document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    .forEach(el => new bootstrap.Tooltip(el));
+
+  // Home section animations (load immediately, not on scroll)
+  document.addEventListener('DOMContentLoaded', function() {
+    const typewriterText = document.querySelector('.typewriter-text');
+    if (typewriterText) {
+      typewriterText.style.width = '0';
+      setTimeout(() => {
+        typewriterText.style.animation = 'typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite';
+      }, 500);
+    }
+  });
+
+  // Smooth scroll with offset for navbar
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        const navbarHeight = document.querySelector('.navbar').offsetHeight;
+        const targetPosition = targetElement.offsetTop - navbarHeight;
+        
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+        
+        // Update active nav link
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === targetId) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  });
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "K Naga Deepak",
+  "jobTitle": "Machine Learning Engineer",
+  "url": "https://your-portfolio-url.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/nagadeepak/",
+    "https://github.com/Deepak41-co",
+    "https://www.kaggle.com/deepak48"
+  ]
+}
+</script>
+<script>
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+      if (bsCollapse) {
+        bsCollapse.hide();
+      }
+    });
+  });
+</script>
+<script>
+  const ssections = document.querySelectorAll("section");
+  const nnavLinks = document.querySelectorAll(".navbar .nav-link");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    ssections.forEach(section => {
+      const sectionTop = section.offsetTop - 100;
+      if (pageYOffset >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    nnavLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${current}`) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+
+
+</body>
+</html>
